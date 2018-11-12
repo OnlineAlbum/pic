@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+    修改11
     <title>js制作带有遮罩弹出层实现登录小窗口</title>
     
 	<meta http-equiv="pragma" content="no-cache">
