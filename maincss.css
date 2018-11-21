@@ -1,5 +1,5 @@
-.head-bar{
-	background:#FFFFFF url("../zixue/i/main6.jpg");
+﻿.head-bar{
+	background:url("../zixue/img/main6.jpg");
 	height: 500px;
 	width: 96%;
 	margin-top:15px; 
@@ -11,16 +11,19 @@
 	height: 80px;
 	width: 100%;
 	font-family: 楷体;/*文字字体*/
-	font-size : 25pt; /*文字大小*/
+	font-size : 18pt; /*文字大小*/
  	/*line-height : 200%; /*设置行高*/
-	font-weight:bold; /*文字粗体*/
-
-	
+	font-weight:bold; /*文字粗体*/	
+}
+.middle-bar{
+	height: 350px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 .gongneng{
 	display: inline-block;
-	font-family: 宋体； /*文字字体*/
-	font-size : 10pt; /*文字大小*/
 	float: right;
 }
 .gongneng li{
@@ -30,7 +33,7 @@
 	display: inline-block;
 }
 .one{
-	background:#FFFFFF url(../zixue/i/main7.jpg) left;
+	background:#FFFFFF url(../zixue/img/main7.jpg) left;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -40,7 +43,7 @@
 	margin-left:2%; 
 }
 .two{
-	background:#FFFFFF url(../zixue/i/main3.jpg) center;
+	background:#FFFFFF url(../zixue/img/main3.jpg) center;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -48,7 +51,7 @@
 	margin-bottom:10px; 
 }
 .three{
-	background:#FFFFFF url(../zixue/i/main1.jpg) right;
+	background:#FFFFFF url(../zixue/img/main1.jpg) right;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -68,5 +71,194 @@
 	font-family: 楷体;
 }
 .foot_ul li{
-	display: inline;
+	float: left;
+	list-style: none;
+	width:75px;
+	margin-left: 5%;
+	margin-right: 3%;
+	text-align:center;
 }
+.last-bar-f{
+	font-family: 楷体;
+	font-size: 20px;
+	margin-left: 35%;
+	width: 200px;
+	height: 100px;
+}
+.last-bar-f img{
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.last-bar-f img:hover{
+	transform: scale(8);
+}
+.guide-T{
+	float: left;
+}
+.see_ul{
+	float: right;
+}
+.last-bar-s{
+	margin-left:15%;
+}
+
+
+
+
+
+
+
+.m{
+	background:url("../zixue/img/main9.jpg");
+	height: 600px;
+	width: 92%;
+	margin-top:15px; 
+	margin-right:4%; 
+	margin-bottom:10px; 
+	margin-left:4%; 
+}
+.yi{
+	height: 100px;
+	margin-top: 20px;
+	margin-right: 1%;
+	float: right;
+	font-size: 20px;
+	font-family: 楷体;
+}
+
+.yir{
+	float: right;
+	list-style: none;//去除列表中的小圆点
+}
+.yir li{
+	display: inline-block;
+}
+.er{
+	float: right;
+	margin-top: 100px;
+}
+.mini_login{
+			display:none;
+			position:absolute;
+			z-index:2;
+			background:white;
+		}
+		.mini_login .item{
+			width:365px;
+			margin:0 0;
+			height:50px;
+			line-height:48px;
+			padding:0 5px;
+		}
+		.mini_login .item1{
+			width:365px;
+			margin:0 0;
+			height:50px;
+			line-height:48px;
+			padding:0 5px;
+		}
+		/* 登录窗第一行*/
+		.mini_login .firstLine{
+			color:#5677b5;
+			background:#F7F7F7;
+			font-size:18px;
+			font-weight:bold;
+			cursor:move;
+		}
+		.mini_login .item .login_close{
+			display:inline-block;
+			float:right;
+			cursor:pointer;
+			
+		}
+		.mini_login .item label{
+			font-size:14px;
+			margin:15px;
+			
+		}
+		.mini_login .item1 label{
+			font-size:14px;
+			margin:15px 12px 15px 3px;
+			
+		}
+		.mini_login .item input{
+			display:inline-block;
+			height:60%;
+			width:85%;
+			text-indent: 25px;
+			outline: none;
+			margin: 2px 30px;
+		}
+		.mini_login .item1 input{
+			display:inline-block;
+			height:60%;
+			width:85%;
+			text-indent: 25px;
+			outline: none;
+			margin: 2px 30px;
+		}
+		.mini_login .item img{
+			display:inline-block;
+			height:60%;
+			width:40%;
+			font-size:14px;
+			margin:15px 100px;
+		}
+		/*登录按钮*/
+		.mini_login .item .btn_login{
+			width: 85%;
+			height: 40px;
+			background: #3b7ae3;
+			border:none;
+			font-size: 18px;
+			color: #fff;
+			outline: none;
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			line-height: 50px;
+			font-family: "华文行楷";
+		}
+		.mini_login .item .btn_register{
+			display:block;
+			margin:10px 2px 0;
+			height:30px;
+			width:100px;
+			line-height:30px;
+			background:#4490F7;
+			color:white;
+			font-size:16px;
+			font-weight:bold;
+			text-align:center;
+			
+		}
+		.input-username{
+			background:url(../img/input_username.png) no-repeat 2px;
+		}
+		.input-password{
+			background:url(../img/input_password.png) no-repeat 2px;
+		}
+		.input-code{
+			background:url(../img/input_code.png) no-repeat 2px;
+		}
+		.forget-pwd{
+		height: 40px;line-height: 40px;
+		text-align: right;
+		font-size:12px;
+		}
+		.register-now{
+		height: 40px;line-height: 40px;
+		text-align: right;
+		font-size:12px;
+		}
+		.cover{
+			display:none;
+			width:100%;
+			height:100%;
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:1;
+			background-color:#000;
+			opacity:0.3;
+		}
