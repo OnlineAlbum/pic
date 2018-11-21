@@ -1,6 +1,12 @@
 function openLogin(){
   document.getElementById("win").style.display="";   
 }
+function jump(){
+	var url = "zuizhong.jsp";
+	window.location.href = url;
+}
+
+
 function closeLogin(){
   document.getElementById("win").style.display="none";
 }
@@ -15,7 +21,7 @@ var oDiv = document.getElementById(obj);
 if (sType == 'show') { oDiv.style.display = 'block';}
 if (sType == 'hide') { oDiv.style.display = 'none';}
 }
-
+$('.dropdown-toggle').dropdown()
 function checkEmpty(form){
 	if(document.userInfo.username.value==""){
 		window.alert("请输入用户名！");
@@ -31,7 +37,24 @@ function checkEmpty(form){
 	}
 	return true;
 }
-
+function checkPhoto(form) {
+	if (form.photoName.value == "") {
+		alert("\u8bf7\u8f93\u5165\u76f8\u7247\u7684\u540d\u79f0\uff01");
+		return false;
+	}
+	if (form.file.value == "") {
+		alert("\u8bf7\u9009\u62e9\u6587\u4ef6\u4f4d\u7f6e");
+		return false;
+	}
+	if (form.code.value == "") {
+		alert("\u8bf7\u8f93\u5165\u6821\u9a8c\u7801\uff01");
+		return false;
+	}
+}
+function reload(){
+	
+	document.getElementById("checkCode").src="image.jsp?"+Math.random();
+}
 window.onload = function(){
 	document.getElementById("btn_showlogin").onclick = showMinLogin;
 	document.getElementById("close_minilogin").onclick = closeLogin;
@@ -46,7 +69,7 @@ window.onload = function(){
 		mini_login.style.display = "block";
 		cover.style.display = "block";
 		mini_login.style.left = (document.body.scrollWidth - mini_login.scrollWidth)/2+"px";
-		mini_login.style.top = (document.body.scrollHeight - mini_login.scrollHeight)/2-160+"px";
+		mini_login.style.top = (document.body.scrollHeight - mini_login.scrollHeight)/2+"px";
 		
 	}
 	/*关闭登陆窗口*/
@@ -86,10 +109,7 @@ window.onload = function(){
 			moveable = false;
 		}				
 	}
-	function reload(){
-		
-		document.getElementById("checkCode").src="image.jsp?"+Math.random();
-	}
+
 	function login(){
 		
 		var username = document.userInfo.username.value;

@@ -26,19 +26,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div>
 			<h1>注册账号</h1>
 			<form action="RegistServlet" method="post">
-				<div  style="padding-top: 34px;">
+				<div class="c">
 					请输入账号： <input type="text" name="username" placeholder="账号" value=""
 						style="width: 157px; ">
 				</div>
-				<div >
+				<div class="c">
 					请输入密码： <input type="password" name="password" placeholder="密码"
 						value="" style="width: 157px; ">
 				</div>
-				<div >
+				<div class="c">
 					请确认密码： <input type="password" name="rpsw" placeholder="确认密码"
 						value="" style="width: 157px; ">
 				</div>
-				<input type="submit" value="注册" style="width: 60px; ">
+				<input type="submit" value="注册" style="width: 88px;">
+				<input type = "button" value = "返回" onclick = "window.location.href = 'zuizhong.jsp'" style="width:88px;">
 			</form>
 			<font color="red" size="3">${msg }</font>
 		</div>

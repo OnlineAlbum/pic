@@ -1,5 +1,5 @@
-.head-bar {
-	background: #FFFFFF url("../img/main6.jpg");
+﻿.head-bar {
+	background: url(../img/main6.jpg);
 	height: 500px;
 	width: 96%;
 	margin-top: 15px;
@@ -11,16 +11,22 @@
 .head_bar_con {
 	height: 80px;
 	width: 100%;
-	font-family: 妤蜂綋; /*鏂囧瓧瀛椾綋*/
-	font-size: 25pt; /*鏂囧瓧澶у皬*/
-	/*line-height : 200%; /*璁剧疆琛岄珮*/
-	font-weight: bold; /*鏂囧瓧绮椾綋*/
+	font-family: 楷体; /*文字字体*/
+	font-size: 18pt; /*文字大小*/
+	/*line-height : 200%; /*设置行高*/
+	font-weight: bold; /*文字粗体*/
+}
+
+.middle-bar {
+	height: 350px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
 }
 
 .gongneng {
 	display: inline-block;
-	font-family: 瀹嬩綋锛� /*鏂囧瓧瀛椾綋*/ 
-	 font-size : 10pt; /*鏂囧瓧澶у皬*/
 	float: right;
 }
 
@@ -64,7 +70,7 @@
 }
 
 .tab-title {
-	font-family: 瀹嬩綋;
+	font-family: 宋体;
 	font-size: 25px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -73,11 +79,80 @@
 .jie {
 	text-align: center;
 	margin: 0 auto;
-	font-family: 妤蜂綋;
+	font-family: 楷体;
 }
 
 .foot_ul li {
-	display: inline;
+	float: left;
+	list-style: none;
+	width: 75px;
+	margin-left: 5%;
+	margin-right: 3%;
+	text-align: center;
+}
+
+.last-bar-f {
+	font-family: 楷体;
+	font-size: 20px;
+	margin-left: 35%;
+	width: 200px;
+	height: 100px;
+}
+
+.last-bar-f img {
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.last-bar-f img:hover {
+	transform: scale(8);
+}
+
+.guide-T {
+	float: left;
+}
+
+.see_ul {
+	float: right;
+}
+
+.last-bar-s {
+	margin-left: 15%;
+}
+
+.m {
+	background: url("../img/main9.jpg");
+	height: 600px;
+	width: 92%;
+	margin-top: 15px;
+	margin-right: 4%;
+	margin-bottom: 10px;
+	margin-left: 4%;
+}
+
+.yi {
+	height: 100px;
+	margin-top: 20px;
+	margin-right: 1%;
+	float: right;
+	font-size: 20px;
+	font-family: 楷体;
+}
+
+.yir {
+	float: right;
+	list-style: none;
+	//
+	去除列表中的小圆点
+}
+
+.yir li {
+	display: inline-block;
+}
+
+.er {
+	float: right;
+	margin-top: 100px;
 }
 
 .mini_login {
@@ -98,6 +173,14 @@
 .mini_login .item1 {
 	width: 365px;
 	margin: 0 0;
+	height: 50px;
+	line-height: 48px;
+	padding: 0 5px;
+}
+
+.mini_login .item2 {
+	width: 365px;
+	margin: 25px 0 5px 0;
 	height: 50px;
 	line-height: 48px;
 	padding: 0 5px;
@@ -129,7 +212,7 @@
 
 .mini_login .item input {
 	display: inline-block;
-	height: 60%;
+	height: 75%;
 	width: 85%;
 	text-indent: 25px;
 	outline: none;
@@ -138,7 +221,16 @@
 
 .mini_login .item1 input {
 	display: inline-block;
-	height: 60%;
+	height: 75%;
+	width: 85%;
+	text-indent: 25px;
+	outline: none;
+	margin: 2px 30px;
+}
+
+.mini_login .item2 input {
+	display: inline-block;
+	height: 75%;
 	width: 85%;
 	text-indent: 25px;
 	outline: none;
@@ -232,4 +324,12 @@
 	background-size: cover;
 	/* 设置背景颜色，背景图加载过程中会显示背景色 */
 	background-color: #464646;
+}
+
+.c {
+	width: 365px;
+	margin: 0 0;
+	height: 40px;
+	line-height: 48px;
+	padding: 0 5px;
 }

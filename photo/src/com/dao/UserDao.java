@@ -74,12 +74,12 @@ public class UserDao {
 		}
 	}
 	//µ•∂¿≤‚ ‘ π”√
-	// public static void main(String[] args) {
-	// UserDao u = new UserDao();
-     // u.addUser("345", "345");
-	// String psw =new UserDao().findUsername("999");
-	// System.out.println(psw);
+	//public static void main(String[] args) {
+		//UserDao u = new UserDao();
+		//u.addUser("345", "345");
+	   // String psw =new UserDao().findUsername("345");
+		//System.out.println(psw);
 
-	// }
+	//}
 	
 }
