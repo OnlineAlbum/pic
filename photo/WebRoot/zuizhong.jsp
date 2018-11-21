@@ -4,9 +4,9 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="renderer" content="webkit">
@@ -14,16 +14,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta name="description" content="LC网络相册可以制作属于自己的相册，留住那些难忘的时光、美丽的风景，传播快乐与美，分享快乐与美。" />
 	<title>网络相册</title>
 	<meta content="no-transform " http-equiv="Cache-Control" />
-	<link rel="stylesheet" type="text/css" href="css/maincss.css"></link>
-	<script type="text/javascript" src="js/zuijs.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/maincss.css">
+	
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 
-  <body>
-   
-	<% session.setMaxInactiveInterval(60);
-	response.setHeader("Cache-Control", "no-cache");
-	%>
+<body>
+
 	<div>
 
 
@@ -35,17 +35,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             		<li>
                 		<a href="javascript:openDialog();">注册</a>						
 						<div id=res style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:#edf; text-align:center;" >
-							<a href="javascript:closeDialog();" class="close" style="display: block;text-align: right;">关闭</a>
-							<div class="register">
-            					<ul class="tab-head" style="font-size: 15px;font-family: 宋体;">
-                					<div class="tab-title" style="font-family: 宋体;font-size:25px;margin-top:25px;  margin-bottom:15px;">注册账号</div>
-                					<li style="font-family: 宋体;font-size:20px;margin-top:15px;  margin-bottom:15px;">      	请输入手机号:&nbsp;                    						
-                        				<input type="text" id="input-mobile" value="">		
-                					</li>
-                					<li style="font-family: 宋体;font-size:20px;margin-top:15px;  margin-bottom:30px;">
-                        				请输入验证码:&nbsp;                   						
-                        				<input type="text" id="reg-image-code" value="">							
-                        			</li>
+                            <a href="javascript:closeDialog();" class="close" style="display: block;text-align: right;">关闭</a>
+                            <div class="register">
+                                <ul class="tab-head" style="font-size: 15px;font-family: 宋体;">
+                                    <div class="tab-title" style="font-family: 宋体;font-size:25px;margin-top:25px;  margin-bottom:15px;">注册账号</div>
+                                    <li style="font-family: 宋体;font-size:20px;margin-top:15px;  margin-bottom:15px;">       请输入手机号:&nbsp;                                           
+                                        <input type="text" id="input-mobile" value="">      
+                                    </li>
+                                    <li style="font-family: 宋体;font-size:20px;margin-top:15px;  margin-bottom:30px;">
+                                        请输入验证码:&nbsp;                                           
+                                        <input type="text" id="reg-image-code" value="">                            
+                                    </li>
             					</ul>           
             					<a href="register.htm" id="reg-btn">立即注册</a>
             					<p class="mt_20">
@@ -57,10 +57,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     						</div>
     					</div>
             		</li>
-						
+
            	 		<li>
-           	 		
-           	 		<a href="javascript:void(0)" class="btn_login" id="btn_showlogin">登录</a>
+                		<a href="javascript:void(0)" class="btn_login" id="btn_showlogin">登录</a>
 						
 						<div class="mini_login" id="mini_login">
 							<!-- 表单 -->
@@ -71,8 +70,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<span class="login_title">我要登录</span> <span class="login_close"
 										id="close_minilogin">X</span>
 									</div>
-								<div class="item" style="padding-top: 34px;">
-									<input class="input-username" type="text" name="username" placeholder="手机/邮箱/用户名" value=""
+								<div class="item2">
+									<input class="input-username" type="text"  name="username" placeholder="手机/邮箱/用户名" value=""
 										title="请输入用户名" />
 								</div>
 								<div class="item">
@@ -98,21 +97,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								
 							</form>
 						</div>
-						
-					</li> 	
+            		</li> 	
 
 
-            		<li class="more">
-                		<a href="#" class="openTri_R marginR10" onmouseover="show('aa', 'show');" onmouseout="show('aa', 'hide');">了解更多</a>
-                		<div style="display:none;" id="aa">
-                    		<div class="pop_column">
-                        		<a class="aboutus" href="aboutus.jsp">关于我们</a>
-                        	</div>
-                        	<div>
-                        		<a class="contactus" href="contactus.jsp">联系我们</a>
-                    		</div>
-                		</div>
-            		</li>
+
+
+
+
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            了解更多 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="aboutus.jsp">关于我们</a></li>
+                            <li><a href="contactus.jsp">联系我们</a></li>
+                        </ul>
+                    </li>
         		</ul> 
     		</div>	
 		</div>
@@ -134,52 +134,64 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 
 		<div class="last-bar">
-			<div>
-				<span class="foot_T">关注我们</span>
-        		<ul class="see_ul">
-           			<li><a href="#ongo" class="icon_wx indexdialogpic" name="focusus"></a></li>
-            		<li><a href="http://weibo.com/" target="_blank" class="icon_wb"></a></li>
+			<div class="last-bar-f">
+				<span>关注我们</span>
+                <ul class="see_ul">
+           			<li><a href="#ongo"><img src="img/qq.jpg.png" width="30px" height="30px"></a></li>
+            		<li><a href="#ongo"><img src="img/weixin.png" width="30px" height="30px"></a></li>
         		</ul>	
 			</div>
-							
+			<div class="last-bar-s">			
         	<ul class="foot_ul">
             <li>
-                <span class="guide_T">我们</span>
-                <a href="aboutus.jsp" target="_blank">关于我们</a>
-                <a href="joinus.jsp" target="_blank">加入我们</a>
+                <span class="guide_T">了解我们</span>
+                <p>
+                <a href="aboutus.jsp" target="_blank">关于我们</a><br/>
+                <a href="joinus.jsp" target="_blank">加入我们</a><br/>
                 <a href="contactus.jsp" target="_blank">联系我们</a>
+            </p>
             </li>
             <li>
                 <span class="guide_T">网站帮助</span>
+                <p>
                 <a href="help.jsp" target="_blank" >帮助中心</a>
+            </p>
             </li>
             <li class="width_280">
                 <span class="guide_T">网站协议</span><br/>
-                <a href="service.jsp" target="_blank">服务协议</a> 
-                <a href="privacy.jsp" target="_blank">隐私保护</a>
-                <a href="copyright.jsp" target="_blank">版权声明</a>
-                <a href="disclaimer.jsp" target="_blank">免责声明</a>
+                <p>
+                <a href="service.jsp" target="_blank">服务协议</a><br/> 
+                <a href="privacy.jsp" target="_blank">隐私保护</a><br/>
+                <a href="copyright.jsp" target="_blank">版权声明</a><br/>
+                <a href="disclaimer.jsp" target="_blank">免责声明</a><br/>
                 <a href="intellectualProperty.jsp" target="_blank">知识产权声明</a>
+            </p>
             </li>
             <li class="bigFont online_kf">
-                <span class="logindialog"   ><i></i>在线客服</span>
-                <p>客服电话  12345678</p>
+                <span class="guide_T"   >在线客服</span>
+                <p>客服电话: 12345678</p>
                 <a href="mailto:cxiaocha@163.com">客服邮箱  cxiaocha@163.com</a>
             </li>
-        	</ul>
+        	
+           
         
-        	<dl class="link_dl">
-            <dt>友情链接</dt>
-            <dd>
-                <a target="_blank" href="http://www.58pic.com/?tid=1088&b_scene_zt=1">千图网</a>
+        	<li class="link_dl">
+            <span class="guide_T">友情链接</span>
+            <p>
+                <a target="_blank" href="http://www.58pic.com/?tid=1088&b_scene_zt=1">千图网</a></br>
                 <a target="_blank" href="http://huaban.com/">花瓣网</a>
-            </dd>        
-        	</dl>
+            </p>
+        </li>
+            </ul>
+            </div>
 		</div>
 
 
 	</div>
+	</div>
 	<!-- 遮罩层 -->
     <div class="cover"></div>
 </body>
+<script type="text/javascript" src="js/zuijs.js"></script>
 </html>
+

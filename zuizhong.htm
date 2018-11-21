@@ -53,28 +53,43 @@
             		</li>
 
            	 		<li>
-                		<a href="javascript:openLogin();" class="log">登录</a>		
-                		<div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:#edf; text-align:center;" >
-							<a href="javascript:closeLogin();" style="display: block;text-align: right;">关闭</a>
-							<div class="clearfix">
-								<div class="r_main_l">
-									<ul class="r_tab clearfix">
-                    					<li class="percent_50 tc cur underL1" id="generalLi">账号密码登录</li>
-                    					<li class="percent_50 tc cur" id="mobileLi">短信快捷登录</li>
-                					</ul>
-                					<div id="generalLogin">
-                    					<a href="###" class="r_input mt_10" id="orgBtn">登录</a>
-                    					<div class="r_login_space clearfix">
-                        					<span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie" checked="checked" />自动登录</span>
-                        					<span class="fr col_gray"><a href="http://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span>
-                    					</div>
-                					</div>
-                					<div id="mobileLogin" style="display:none">
-                    					<a href="###" class="r_input mt_10" id="orgBtnMobile">登录</a>
-                    					<p class="mt_10 mt_20">＊验证即登录，未注册将自动创建账号</p>
-                					</div>
-            					</div>
-        					</div>
+                		<a href="javascript:void(0)" class="btn_login" id="btn_showlogin">登录</a>
+						
+						<div class="mini_login" id="mini_login">
+							<!-- 表单 -->
+							<form name="userInfo" method="post" action="userInfoServlet?info=checkUser"
+								onSubmit="return checkEmpty(userInfo)">
+		
+									<div class="item firstLine" id="firstLine">
+									<span class="login_title">我要登录</span> <span class="login_close"
+										id="close_minilogin">X</span>
+									</div>
+								<div class="item" style="padding-top: 34px;">
+									<input class="input-username" type="text" name="username" placeholder="手机/邮箱/用户名" value=""
+										title="请输入用户名" />
+								</div>
+								<div class="item">
+									<input class="input-password" type="password" name="password" placeholder="密码"
+										value="" title="请输入密码" />
+								</div>
+								<div class="item1">
+									<input class="input-code" type="text" name="code" placeholder="验证码" value=""
+										title="请输入验证码" />
+								</div>
+								
+								<div class="item">
+
+									<a href="javascript:void(0)" id="link"><img id="checkCode"
+										alt="验证码" src="image.jsp"></a>
+								</div>
+								<div class="resultDiv"><span id="resultInfo" style="margin-left: 121px;color: #f10707;font-size:16px;"></span> </div>
+								<div class="forget-pwd"><a href="#">忘记密码</a></div>
+								<div class="item">
+									<input id="login" class="btn_login" type="button" value="登陆" />
+								</div>
+								<div class="register-now"><a href="#">立即注册</a></div>
+								
+							</form>
 						</div>
             		</li> 	
 
