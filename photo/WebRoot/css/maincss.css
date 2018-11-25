@@ -333,3 +333,43 @@
 	line-height: 48px;
 	padding: 0 5px;
 }
+
+
+.first{
+	background:url("../img/main9.jpg") no-repeat fixed center;
+	
+}
+
+.yir{
+	position: fixed;
+	right: 60px;
+	top: 20px;
+	list-style: none;//去除列表中的小圆点
+}
+.yir li{
+	display: inline-block;
+}
+.er{
+	position: absolute;
+	left: 25%;
+	top: 10%;
+	width: 50%;
+}
+.panel-heading{
+background: #d9edf7;
+}
+.panel-body{
+	margin: 0 auto;
+	text-align: left;
+	background: #ffffff;
+	font-size: 15px;
+	font-family: 楷体；
+}
+.firstau{
+	background:url("../img/teammates.jpg") no-repeat fixed center;
+	
+}
+.firstcu{
+	background:url("../img/cu.jpg") repeat fixed center;
+	
+}

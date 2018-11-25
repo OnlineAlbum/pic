@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		<div class="head-bar"><!--这里为网页的上大部分-->
 			<div class="head_bar_con">
-        		<a href="zuizhong.htm" class="logo_index">LC</a>
+        		<a href="zuizhong.jsp" class="logo_index">LC</a>
         		<span class="miaosu">制作属于自己的相册</span>
         		<ul class="gongneng">
             		<li>
@@ -125,9 +125,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li>
                 <span class="guide_T">了解我们</span>
                 <p>
-                <a href="aboutus.jsp" target="_blank">关于我们</a><br/>
-                <a href="joinus.jsp" target="_blank">加入我们</a><br/>
-                <a href="contactus.jsp" target="_blank">联系我们</a>
+                <a href="aboutus.jsp" target="_blank">关于我们</a><br/>            
+                <a href="contactus.jsp" target="_blank">意见或建议</a>
             </p>
             </li>
             <li>
@@ -139,11 +138,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class="width_280">
                 <span class="guide_T">网站协议</span><br/>
                 <p>
-                <a href="service.jsp" target="_blank">服务协议</a><br/> 
                 <a href="privacy.jsp" target="_blank">隐私保护</a><br/>
                 <a href="copyright.jsp" target="_blank">版权声明</a><br/>
-                <a href="disclaimer.jsp" target="_blank">免责声明</a><br/>
-                <a href="intellectualProperty.jsp" target="_blank">知识产权声明</a>
+                
             </p>
             </li>
             <li class="bigFont online_kf">
