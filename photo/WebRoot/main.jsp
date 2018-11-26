@@ -41,13 +41,13 @@ a:hover,a:active{color:#F9D909}
   <tr align=center>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:16px;"><a href="personal home page.jsp">个人主页</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">查看</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">上传</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp">上传</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">删除</a></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">退出</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp">退出</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">主题</a></td>
   </tr>
   </table>

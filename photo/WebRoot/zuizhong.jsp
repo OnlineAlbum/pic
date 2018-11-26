@@ -117,7 +117,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<span>关注我们</span>
                 <ul class="see_ul">
            			<li><a href="#ongo"><img src="img/qq.png" width="30px" height="30px"></a></li>
-            		<li><a href="#ongo"><img src="img/微信图片_20181125110604.png" width="30px" height="30px"></a></li>
+            		<li><a href="#ongo"><img src="img/wechat.png" width="30px" height="30px"></a></li>
         		</ul>	
 			</div>
 			<div class="last-bar-s">			
