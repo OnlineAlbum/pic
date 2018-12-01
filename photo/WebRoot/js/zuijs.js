@@ -76,6 +76,11 @@ window.onload = function(){
 	function closeLogin(){
 		var mini_login = document.getElementsByClassName("mini_login")[0];
 		var cover = document.getElementsByClassName("cover")[0];
+		document.getElementsByClassName("input-username")[0].value="";
+		document.getElementsByClassName("input-password")[0].value="";
+		document.getElementsByClassName("input-code")[0].value="";
+		document.getElementById("resultInfo").innerHTML = "";
+		reload();
 		mini_login.style.display = "none";
 		cover.style.display = "none";
 		
@@ -139,3 +144,4 @@ window.onload = function(){
 	}
 	
 };
+

@@ -9,9 +9,13 @@ a{text-decoration:none;}
 a:link, a:visited{color:#F0F0F0}
 a:hover,a:active{color:#F9D909}
 
+.search{
+	width:700px;
+}
 #search{
-  background-color:#FBFFFD;
-  opacity:0.6;
+	width:400px;
+  	background-color:#FBFFFD;
+  	opacity:0.6;
 }
 
  input::-webkit-input-placeholder {
@@ -27,7 +31,7 @@ a:hover,a:active{color:#F9D909}
 
 </style>
 </head>
-<body style="background-img:url(img/water.jpg);background-position:center center;background-size:cover;font-size:30px;text-align=center;">
+<body style="background:url(img/water.jpg);background-position:center center;background-size:cover;font-size:30px;text-align=center;">
 <bgsound src="music/Feng.mp3" loop="-1">
 <center>
   <table width=100% height=600px border=0>
@@ -41,13 +45,13 @@ a:hover,a:active{color:#F9D909}
   <tr align=center>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:16px;"><a href="personal home page.jsp">个人主页</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">查看</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">上传</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp">上传</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">删除</a></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">退出</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp">退出</a></td>
   <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">主题</a></td>
   </tr>
   </table>
@@ -55,10 +59,18 @@ a:hover,a:active{color:#F9D909}
   </tr>
   
   <tr><td width=100% height=800px colspan=10>
-  <table width=100% border=0>
+  <table width=100% border=0 >
   
-  <tr><td colspan=4><table width=100% align=center>
-  <tr align=center><td width=100% height=80px align=center style="display: inline-block; vertical-align:middle;" ><div class="search"><form><input type="text" id="search" name="search" size="100" placeholder="请输入关键字搜索你想要的图片" autofocus="autofocus" x-webkit-speech>&nbsp;<input type="img" src="img/sousuo2.png"></form></div></td></tr>
+  <tr><td colspan=4><table width=100% align="center">
+  <tr >
+  <td width=350px></td>
+  <td width=100% height=80px style="display: inline-block;" align="center" >
+  <div class="search">
+  <form>
+  <input type="text" id="search" name="search" size="100" placeholder="请输入关键字搜索你想要的图片" autofocus="autofocus" x-webkit-speech/>&nbsp;<input type="image" src="img/sousuo2.png"/>
+  </form>
+  </div>
+  </td></tr>
   </table></td></tr>
   
   <tr align=center>

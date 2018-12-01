@@ -28,6 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 		<div class="head-bar"><!--这里为网页的上大部分-->
+		
 			<div class="head_bar_con">
         		<a href="zuizhong.jsp" class="logo_index">LC</a>
         		<span class="miaosu">制作属于自己的相册</span>
@@ -78,11 +79,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
             		</li> 	
 
-
-
-
-
-
                     <li role="presentation" class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             了解更多 <span class="caret"></span>
@@ -94,7 +90,71 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </li>
         		</ul> 
     		</div>	
+    		
+ 
+ 
+ 		
+    		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    			
+    		<!-- 轮播（Carousel）指标 -->
+    		<ol class="carousel-indicators">
+        		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        		<li data-target="#myCarousel" data-slide-to="1"></li>
+        		<li data-target="#myCarousel" data-slide-to="2"></li>
+        		<li data-target="#myCarousel" data-slide-to="3"></li>
+    		</ol>   
+    		<!-- 轮播（Carousel）项目 -->
+    		<div class="carousel-inner">
+        		<div style="height:450px;background-image:url(img/main6.jpg);" class="item active">
+          
+        		</div>
+        		<div style="height:450px;background-image:url(img/flower.jpeg);" class="item">
+           		<!-- <img class="img-responsive" src="img/main6.jpg" alt="Second slide"> -->
+        		</div>
+        		<div style="height:450px;background-image:url(img/life.jpg);" class="item">
+          		<!--  <img class="img-responsive" src="img/memory1.jpg" alt="Third slide">-->
+        		</div>
+        		<div style="height:450px;background-image:url(img/city.jpeg);" class="item active">
+          		<!--   <img class="img-responsive" src="img/green.jpg" alt="First slide"> --> 
+        		</div>
+    		</div>
+    		<!-- 轮播（Carousel）导航 -->
+        	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            	<span class="sr-only">Previous</span>
+        	</a>
+        	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            	<span class="sr-only">Next</span>
+        	</a>
+    		<!-- 控制按钮 -->
+    		<div style="text-align:center;">
+        		<input class="btn start-slide">
+    		</div>
+		</div> 
+	<script>
+		$(function(){
+        // 初始化轮播
+        $(".start-slide").click(function(){
+            $("#myCarousel").carousel('cycle');
+        });
+       
+    });
+	</script>
+	
 		</div>
+
+
+ 
+   
+
+
+
+
+
+
+
+
 
 
 
@@ -117,7 +177,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<span>关注我们</span>
                 <ul class="see_ul">
            			<li><a href="#ongo"><img src="img/qq.png" width="30px" height="30px"></a></li>
-            		<li><a href="#ongo"><img src="img/微信图片_20181125110604.png" width="30px" height="30px"></a></li>
+            		<li><a href="#ongo"><img src="img/wechat.png" width="30px" height="30px"></a></li>
         		</ul>	
 			</div>
 			<div class="last-bar-s">			

@@ -97,7 +97,7 @@ public class PhotoServlet extends HttpServlet {
 		}
 
 		request.setAttribute("information", information);
-		request.getRequestDispatcher("user_uploadPhoto.jsp").forward(request,
+		request.getRequestDispatcher("shangchuan.jsp").forward(request,
 				response);
 
 	}

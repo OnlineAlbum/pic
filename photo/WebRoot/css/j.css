@@ -1,0 +1,60 @@
+.banner{
+            position:relative;
+            height:100%;
+            background:#ccc;
+            margin-top:0;
+            margin-left:260px;
+           margin-right: 230px;
+           
+        }
+.zy-Slide3 ul{
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:4% 3% 5% 3%;
+    padding:0;
+}
+.zy-Slide3 li{
+	display:inline-block;
+    list-style:none;
+    margin:0;
+}
+.zy-Slide3 li img{
+	width:100%;
+	height:100%;
+}
+.yi{
+    width:30%;
+    height:30%;
+   
+}
+.er{
+     width:30%;
+    height:30%;
+    
+}
+.san{
+     width:30%;
+    height:30%;
+   
+}
+.sii{
+     width:30%;
+    height:30%; 
+}
+.wu{
+     width:30%;
+    height:30%;
+   
+}
+
+.liu{
+     width:30%;
+    height:30%;
+  
+}
+.qi{
+     width:30%;
+    height:30%;
+  
+}

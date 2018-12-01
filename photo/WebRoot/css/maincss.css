@@ -1,11 +1,11 @@
 ﻿.head-bar {
-	background: url(../img/main6.jpg);
+	
 	height: 500px;
-	width: 96%;
-	margin-top: 15px;
-	margin-right: 2%;
-	margin-bottom: 10px;
-	margin-left: 2%;
+	width: 94%;
+	margin-top: 20px;
+	margin-right: 3%;
+	margin-bottom: 5px;
+	margin-left: 3%;
 }
 
 .head_bar_con {
@@ -39,7 +39,7 @@
 }
 
 .one {
-	background: #FFFFFF url(../img/main7.jpg) left;
+	background: #FFFFFF url(../img/20 (3).jpg) left;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -50,7 +50,7 @@
 }
 
 .two {
-	background: #FFFFFF url(../img/main3.jpg) center;
+	background: #FFFFFF url(../img/20 (4).jpg) center;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -373,3 +373,45 @@ background: #d9edf7;
 	background:url("../img/cu.jpg") repeat fixed center;
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel{
+			height:412px;
+			margin-bottom:40px;
+		}
+		.carousel.item{
+			height:412px;
+		}
+		.carousel-inner{
+			max-height:410px;
+		}
+		.img-responsive{
+			display: inline-block;
+  			height: 412px;
+  			max-width: 100%;
+		}
+		
+		
+		
+		
+		
