@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dao.UserDao;
+import com.dao.OperationData;
 
 public class RegistServlet extends HttpServlet {
 
@@ -18,7 +18,9 @@ public class RegistServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		String rpsw = request.getParameter("rpsw");// 得到表单输入的内容
+		String rpsw = request.getParameter("rpsw");
+		String question = request.getParameter("question");
+		String answer = request.getParameter("answer");// 得到表单输入的内容
 		if (username == null || username.trim().isEmpty()) {
 			request.setAttribute("msg", "帐号不能为空");
 			request.getRequestDispatcher("/regist.jsp").forward(request, response);
@@ -34,12 +36,22 @@ public class RegistServlet extends HttpServlet {
 			request.getRequestDispatcher("/regist.jsp").forward(request, response);
 			return;
 		}
+		if (question == null || question.trim().isEmpty()) {
+			request.setAttribute("msg", "问题不能为空");
+			request.getRequestDispatcher("/regist.jsp").forward(request, response);
+			return;
+		}
+		if (answer == null || answer.trim().isEmpty()) {
+			request.setAttribute("msg", "答案不能为空");
+			request.getRequestDispatcher("/regist.jsp").forward(request, response);
+			return;
+		}
 
-		String psw = new UserDao().findUsername(username);
+		String psw = new OperationData().findUsername(username);
 		if (psw == null) {
 
-			UserDao u = new UserDao();
-			u.addUser(username, password);// 调用addUser（）方法
+			OperationData u = new OperationData();
+			u.addUser(username, password,question,answer);// 调用addUser（）方法
 			// request.setAttribute("msg", "恭喜："+username+"，注册成功");
 			request.getRequestDispatcher("/zuizhong.jsp").forward(request, response);
 		} else {
