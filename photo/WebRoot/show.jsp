@@ -28,20 +28,13 @@
 
         .toprow-ul{
         	list-style-type:none;
-        	margin:0;
-        	padding:0;
-        	padding-top:28px;
-        	padding-bottom:6px;
         }
 
         .toprow-list{
-        	display:inline;
-        	margin:0 100px 0 93px;/*设置两个a标签在div中的距离*/
+        	display:inline-block;
+        	margin:25px 0px 10px 340px;设置两个a标签在div中的距离*/
         }
 
-        .exit{
-        	margin-left:450px;
-        }
 
         a:link,a:visited{
         	font-weight:bold;
@@ -62,9 +55,22 @@
 			float:left;
 			width:260px;
 			height:100%;
-			background-color:#1a2855;			
+			background-color:#1a2855;
+			margin-top:-55px;
+			background-image:url("img/starsky.png");
+			background-size:cover;
+			background-repeat: no-repeat;			
 		}
-
+		
+		
+		.photoname{
+		    margin-top:200px;		    
+		}
+       
+       .photoname p{
+           margin-bottom:15px;
+       }
+       
 		.nav{
 			width:250px;
 			margin:0px 5px 0;			
@@ -218,104 +224,41 @@
 <body>
 	<div class="toprow">
 		<ul class="toprow-ul">
-		<li class="toprow-list"><a href="">相册类型</a></li>
 		<li class="toprow-list"><a href="main.jsp">回到首页</a></li>
-		<li class="toprow-list"><a class="exit" href="main.jsp">退出登录</a></li>
-		<ul>
+		<li class="toprow-list"><a href="main.jsp">上传</a></li>
+		<li class="toprow-list"><a href="main.jsp">退出登录</a></li>
+		</ul>
 	</div>
 
 
 	<div class="wrap">
 
-		<!--<div class="header">相册类别</div>-->
 		<div class="nav">
+		
 			<ul>
 				<li class="nav-list">
 					<h2>
 						<i></i>
-					     童年印记
+					     照片显示方式
 					</h2>
 					<div class="hide">		
 						<button id="btn1">3D轮播显示</button>
 						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>						
+						<button id="btn3">静&nbsp;&nbsp;态&nbsp;&nbsp;显&nbsp;&nbsp;示</button>						
 					</div>
 				</li>
 
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     青年踏歌
-					</h2>
-					<div class="hide">
-						<button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>		
-					</div>
-				</li>
-
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     中年大智
-					</h2>
-					<div class="hide">
-						<button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>		
-
-					</div>
-				</li>
-
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     耄耋福享
-					</h2>
-					<div class="hide">
-						<button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>		
-					</div>
-				</li>
-
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     我的家人
-					</h2>
-					<div class="hide">
-						<button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>		
-					</div>
-				</li>
-
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     我的朋友
-					</h2>
-					<div class="hide">
-                        <button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>	
-					</div>
-				</li>
-
-				<li class="nav-list">
-					<h2>
-						<i></i>
-					     特别重要
-					</h2>
-					<div class="hide">
-						<button id="btn1">3D轮播显示</button>
-						<button id="btn2">3D翻书显示</button>
-						<button id="btn3">静态显示</button>		
-					</div>
-				</li>
 			</ul>
-		</div>	
+		</div>
+		
+		
+		<div class="photoname">
+		    <p>童年印记</p>
+		    <p>当前登录用户:&nbsp;Doctor Chen</p>
+		    <p>上传者:&nbsp;Doctor Chen</p>
+		    <p>上传时间:&nbsp;2018.12.03</p>
+		    <p>最新上传:&nbsp;暂无</p>		
+		</div>
 			
 	</div>
 	
