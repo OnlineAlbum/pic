@@ -19,32 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-    
-    
-		@font-face
-        {
-        	font-family:"iconfont";
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot");
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot?#iefix") format("embedded-opentype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.woff") format("woff"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.ttf") format("truetype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.svg") format("svg");
-        	font-weight:normal;
-        	font-style:normal;
-
-        }
-
-
-        .iconfont{
-        	font-family:"iconfont";
-        	font-style:normal;
-        	font-weight:normal;
-        	-webkit-font-smoothing:antialiased;
-        	-moz-osx-font-smoothing:grayscale;
-        }
-    
-    </style>
 </head>
 
 
@@ -60,12 +34,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         		<span class="miaosu">制作属于自己的相册</span>
         		<ul class="gongneng">
             		<li>
-                		<a href="regist.jsp"><i class="iconfont">&#xe62d;</i>注册</a>						
+                		<a href="regist.jsp">注册</a>						
 						</li>
             		
 
            	 		<li>
-                		<a href="javascript:void(0)" class="btn_login" id="btn_showlogin"><i class="iconfont">&#xe62e;</i>登录</a>
+                		<a href="javascript:void(0)" class="btn_login" id="btn_showlogin">登录</a>
 						
 						<div class="mini_login" id="mini_login">
 							<!-- 表单 -->
@@ -107,7 +81,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                     <li role="presentation" class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                           <i class="iconfont">&#xe68e;</i> 了解更多 <span class="caret"></span>
+                            了解更多 <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="aboutus.jsp">关于我们</a></li>

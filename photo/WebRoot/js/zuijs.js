@@ -73,6 +73,18 @@ function openLogin(){
 			alert("\u8bf7\u8f93\u5165\u6821\u9a8c\u7801\uff01");
 			return false;
 		}
+		return true;
+	}
+	function checkAlbum(form) {
+		if (form.albumname.value == "") {
+			alert("请输入相册名称！");
+			return false;
+		}
+		if (form.code.value == "") {
+			alert("\u8bf7\u8f93\u5165\u6821\u9a8c\u7801\uff01");
+			return false;
+		}
+		return true;
 	}
 	function reload(){
 		
@@ -151,6 +163,11 @@ function openLogin(){
 					if(xmlHttp.readyState==4){
 						var state = xmlHttp.responseText;
 						if(xmlHttp.status==200 && (state.indexOf("yes")!=-1)){
+							document.getElementsByClassName("input-username")[0].value="";
+							document.getElementsByClassName("input-password")[0].value="";
+							document.getElementsByClassName("input-code")[0].value="";
+							document.getElementById("resultInfo").innerHTML = "";
+							reload();
 							window.location.href="main.jsp";
 						}
 						else{

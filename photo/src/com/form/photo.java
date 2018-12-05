@@ -7,11 +7,20 @@ public class photo {
 	private String photoTime = ""; // 设置相片上传时间的对象
 	private String photoAddress = ""; // 设置相片保存在服务器端地址的对象
 	private String username = ""; // 设置相片上传用户的对象
-	private String photoType = ""; // 设置相片所在相册名称的对象
+	private String albumname = ""; // 设置相片所在相册名称的对象
 	private String printAddress="";
 	private String smallPhoto="";
 	private Integer number=null;
+	private Integer max = null;
 	
+	public Integer getMax() {
+		return max;
+	}
+
+	public void setMax(Integer max) {
+		this.max = max;
+	}
+
 	//设置相册信息的构造方法
 	public photo() {
 	}
@@ -64,12 +73,12 @@ public class photo {
 		this.username = username;
 	}
 
-	public String getPhotoType() {
-		return photoType;
+	public String getAlbumname() {
+		return albumname;
 	}
 
-	public void setPhotoType(String photoType) {
-		this.photoType = photoType;
+	public void setAlbumname(String photoType) {
+		this.albumname = photoType;
 	}
 
 	public String getPrintAddress() {

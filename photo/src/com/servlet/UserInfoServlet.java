@@ -2,6 +2,7 @@ package com.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 
@@ -49,12 +50,13 @@ public class UserInfoServlet extends HttpServlet {
 			if(userInfo!=null){
 				if(userInfo.getPassword().equals(password))
 				{
-					request.getSession().setAttribute("uname",username);
+					request.getSession().setAttribute("userInfo",userInfo);
+					List list = new OperationData().queryPhotoList(username);
+					request.getSession().setAttribute("list", list);
 					response.getWriter().println("yes");
-					//request.getRequestDispatcher("main.jsp").forward(request, response);
-					//response.getWriter().println("<script>alert('匹配成功！！');</script>");
-					//System.out.println("打开了checkuser.jsp");
-					//request.getRequestDispatcher("3Dphoto.jsp").forward(request, response);
+
+				}else{
+					response.getWriter().println("用户名或密码错误！");
 				}
 			}
 			else{
@@ -65,14 +67,6 @@ public class UserInfoServlet extends HttpServlet {
 		else{
 			response.getWriter().println("验证码错误！");
 		}
-		
-		//request.getSession().setAttribute("username","李四");
-		//response.sendRedirect("zuizhong.jsp");
-		//response.getWriter().println("<script language='javascript'>alert('完成！');</script>");
-		//response.sendRedirect("EmbeddedLoginWindow.jsp");
-		//System.out.println("打开了index.jsp");
-		//request.getRequestDispatcher("index.jsp").forward(request, response);
-		//response.sendRedirect("3Dphoto.jsp");
 		
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)

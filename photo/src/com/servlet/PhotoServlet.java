@@ -1,6 +1,9 @@
 package com.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.jspsmart.upload.File;
 import com.jspsmart.upload.Files;
 import com.dao.OperationData;
+import com.form.album;
 import com.form.photo;
+import com.form.UserInfo;
 
 
 public class PhotoServlet extends HttpServlet {
@@ -48,9 +53,8 @@ public class PhotoServlet extends HttpServlet {
 									"photoName")
 									+ i; // 获取相片的名称
 							System.out.println("相片的名称:"+photoName);
-							String photoType = su.getRequest().getParameter(
-									"photoType"); // 获取相册名称
-							System.out.println(photoType);
+							String albumname = su.getRequest().getParameter(
+									"albumname"); // 获取相册名称
 							String photoTime = su.getRequest().getParameter(
 									"photoTime"); // 获取相册上传时间
 							System.out.println("相册上传时间:"+photoTime);
@@ -70,7 +74,7 @@ public class PhotoServlet extends HttpServlet {
 							System.out.println("压缩图路径："+smalldir);
 							photo photo = new photo();
 							photo.setPhotoName(photoName);
-							photo.setPhotoType(photoType);
+							photo.setAlbumname(albumname);
 							photo.setPhotoSize(photoSize);
 							photo.setPhotoTime(photoTime);
 							photo.setUsername(username);
@@ -97,15 +101,68 @@ public class PhotoServlet extends HttpServlet {
 		}
 
 		request.setAttribute("information", information);
-		request.getRequestDispatcher("shangchuan.jsp").forward(request,
-				response);
-
+		request.getRequestDispatcher("shangchuan.jsp").forward(request,response);
+		
+	}
+	
+	public void CreateAlbum(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
+		
+		data = new OperationData();
+		String information = "您输入的数据有误，创建相册失败！";
+		String code = request.getParameter("code");
+		System.out.println("输入的验证码："+code);
+		String codeSession = (String)request.getSession().getAttribute("rand");
+		System.out.println("缓冲的验证码："+codeSession);
+		if(code.equals(codeSession)){
+			String username = request.getParameter("username");
+			String albumtype = request.getParameter("albumtype");
+			String albumtime = request.getParameter("albumtime");
+			String albumname = request.getParameter("albumname");
+			System.out.println("用户名："+username);
+			System.out.println("相册类型："+albumtype);
+			System.out.println("创建时间："+albumtime);
+			System.out.println("相册名称："+albumname);
+			String albumcover = "savefile/cover.jpg";
+			album album = new album();
+			album.setAlbumcover(albumcover);
+			album.setAlbumname(albumname);
+			album.setAlbumtime(albumtime);
+			album.setAlbumtype(albumtype);
+			album.setUsername(username);
+			try{
+				if(data.album_create(album)){
+					information = "您创建相册成功!";
+				}
+			}catch(Exception e){
+				System.out.println(e);
+			}
+			
+		}
+		request.setAttribute("information", information);
+		request.getRequestDispatcher("refresh.jsp").forward(request, response);
+	}
+	public void refresh(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
+		UserInfo userInfo = (UserInfo)request.getSession().getAttribute("userInfo");
+		String username = userInfo.getUsername();
+		System.out.println("当前用户："+username);
+		List list = new OperationData().queryPhotoList(username);
+		request.getSession().setAttribute("list", list);
+		request.getRequestDispatcher("main.jsp").forward(request,response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
 		info = request.getParameter("info");
 		if (info.equals("userUploadPhoto")) {
 			this.user_uploadPhoto(request, response);
+		}
+		if(info.equals("createalbum")){
+			this.CreateAlbum(request, response);
+		}
+		if(info.equals("refresh")){
+			this.refresh(request, response);
 		}
 	}
 

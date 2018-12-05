@@ -32,7 +32,7 @@
 
         .toprow-list{
         	display:inline-block;
-        	margin:25px 0px 10px 340px;设置两个a标签在div中的距离*/
+        	margin:25px 0px 10px 220px;设置两个a标签在div中的距离*/
         }
 
 
@@ -51,12 +51,14 @@
         }
 
 		.wrap{
+			position:relative;
 			display:inline-block;
 			float:left;
 			width:260px;
 			height:100%;
 			background-color:#1a2855;
-			margin-top:-4.7%;
+			margin-top:0px;
+			/*margin-top:-4.7%;*/
 			background-image:url("img/starsky.png");
 			background-size:cover;
 			background-repeat: no-repeat;			
@@ -64,7 +66,9 @@
 		
 		
 		.photoname{
-		    margin-top:200px;		    
+			height:100%;
+		    margin-top:100px;
+		    		    
 		}
        
        .photoname p{
@@ -129,13 +133,13 @@
 			display:inline-block;
 			float:right;
 			width:230px;
-			height:600px;
+			height:100%;
 			/*background-color:#CB804DFF;*/
 			background-image:url("img/starsky.png");
 			background-size:cover;
 			background-repeat: no-repeat;
 			padding:0px;
-			margin-top:-46.9%;
+			margin-top:-46.4%;
 			margin-right：0px;			
 		}
 
@@ -217,43 +221,17 @@
 	    .img{
 	    	width:100%;
 	    	height:100%;
-	    }
-	    
-	   
-    
-    
-		@font-face
-        {
-        	font-family:"iconfont";
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot");
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot?#iefix") format("embedded-opentype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.woff") format("woff"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.ttf") format("truetype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.svg") format("svg");
-        	font-weight:normal;
-        	font-style:normal;
-
-        }
-
-
-        .iconfont{
-        	font-family:"iconfont";
-        	font-style:normal;
-        	font-weight:normal;
-        	-webkit-font-smoothing:antialiased;
-        	-moz-osx-font-smoothing:grayscale;
-        }
-    
-  	
+	    }	
 	
 	</style>
 </head>
 <body>
 	<div class="toprow">
 		<ul class="toprow-ul">
-		<li class="toprow-list"><a href="main.jsp"><i class="iconfont">&#xe619;</i> 回到首页</a></li>
-		<li class="toprow-list"><a href="main.jsp"><i class="iconfont">&#xe613;</i>上传</a></li>
-		<li class="toprow-list"><a href="main.jsp"><i class="iconfont">&#xe612;</i>退出登录</a></li>
+		<li class="toprow-list"><a href="main.jsp">回到首页</a></li>
+		<li class="toprow-list"><a href="main.jsp">上传</a></li>
+		<li class="toprow-list"><a href="main.jsp">删除</a></li>
+		<li class="toprow-list"><a href="main.jsp">退出登录</a></li>
 		</ul>
 	</div>
 
@@ -284,9 +262,10 @@
 		    <p>当前登录用户:&nbsp;Doctor Chen</p>
 		    <p>上传者:&nbsp;Doctor Chen</p>
 		    <p>上传时间:&nbsp;2018.12.03</p>
-		    <p>最新上传:&nbsp;暂无</p>		
+		    <p>最新上传:&nbsp;暂无</p>	
+		    
 		</div>
-			
+	
 	</div>
 	
 	

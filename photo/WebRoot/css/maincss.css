@@ -1,4 +1,4 @@
-ï»¿.head-bar {
+.head-bar {
 	
 	height: 500px;
 	width: 94%;
@@ -11,10 +11,10 @@
 .head_bar_con {
 	height: 80px;
 	width: 100%;
-	font-family: æ¥·ä½“; /*æ–‡å­—å­—ä½“*/
-	font-size: 18pt; /*æ–‡å­—å¤§å°*/
-	/*line-height : 200%; /*è®¾ç½®è¡Œé«˜*/
-	font-weight: bold; /*æ–‡å­—ç²—ä½“*/
+	font-family: ¿¬Ìå; /*ÎÄ×Ö×ÖÌå*/
+	font-size: 18pt; /*ÎÄ×Ö´óĞ¡*/
+	/*line-height : 200%; /*ÉèÖÃĞĞ¸ß*/
+	font-weight: bold; /*ÎÄ×Ö´ÖÌå*/
 }
 
 .middle-bar {
@@ -39,7 +39,7 @@
 }
 
 .one {
-	background: #FFFFFF url(../img/1.jpg) left;
+	background: #FFFFFF url(../img/20 (3).jpg) left;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -50,7 +50,7 @@
 }
 
 .two {
-	background: #FFFFFF url(../img/2.jpg) center;
+	background: #FFFFFF url(../img/20 (4).jpg) center;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -70,7 +70,7 @@
 }
 
 .tab-title {
-	font-family: å®‹ä½“;
+	font-family: ËÎÌå;
 	font-size: 25px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -79,7 +79,7 @@
 .jie {
 	text-align: center;
 	margin: 0 auto;
-	font-family: æ¥·ä½“;
+	font-family: ¿¬Ìå;
 }
 
 .foot_ul li {
@@ -92,7 +92,7 @@
 }
 
 .last-bar-f {
-	font-family: æ¥·ä½“;
+	font-family: ¿¬Ìå;
 	font-size: 20px;
 	margin-left: 35%;
 	width: 200px;
@@ -136,14 +136,14 @@
 	margin-right: 1%;
 	float: right;
 	font-size: 20px;
-	font-family: æ¥·ä½“;
+	font-family: ¿¬Ìå;
 }
 
 .yir {
 	float: right;
 	list-style: none;
 	//
-	å»é™¤åˆ—è¡¨ä¸­çš„å°åœ†ç‚¹
+	È¥³ıÁĞ±íÖĞµÄĞ¡Ô²µã
 }
 
 .yir li {
@@ -185,7 +185,7 @@
 	line-height: 48px;
 	padding: 0 5px;
 }
-/* ç™»å½•çª—ç¬¬ä¸€è¡Œ*/
+/* µÇÂ¼´°µÚÒ»ĞĞ*/
 .mini_login .firstLine {
 	color: #5677b5;
 	background: #F7F7F7;
@@ -244,7 +244,7 @@
 	font-size: 14px;
 	margin: 15px 100px;
 }
-/*ç™»å½•æŒ‰é’®*/
+/*µÇÂ¼°´Å¥*/
 .mini_login .item .btn_login {
 	width: 85%;
 	height: 40px;
@@ -257,7 +257,7 @@
 	display: block;
 	text-align: center;
 	line-height: 50px;
-	font-family: "åæ–‡è¡Œæ¥·";
+	font-family: "»ªÎÄĞĞ¿¬";
 }
 
 .mini_login .item .btn_register {
@@ -312,17 +312,17 @@
 }
 
 .b {
-	/* åŠ è½½èƒŒæ™¯å›¾ */
+	/* ¼ÓÔØ±³¾°Í¼ */
 	background-image: url(../img/6.jpg);
-	/* èƒŒæ™¯å›¾å‚ç›´ã€æ°´å¹³å‡å±…ä¸­ */
+	/* ±³¾°Í¼´¹Ö±¡¢Ë®Æ½¾ù¾ÓÖĞ */
 	background-position: center center;
-	/* èƒŒæ™¯å›¾ä¸å¹³é“º */
+	/* ±³¾°Í¼²»Æ½ÆÌ */
 	background-repeat: no-repeat;
-	/* å½“å†…å®¹é«˜åº¦å¤§äºå›¾ç‰‡é«˜åº¦æ—¶ï¼ŒèƒŒæ™¯å›¾åƒçš„ä½ç½®ç›¸å¯¹äºviewportå›ºå®š */
+	/* µ±ÄÚÈİ¸ß¶È´óÓÚÍ¼Æ¬¸ß¶ÈÊ±£¬±³¾°Í¼ÏñµÄÎ»ÖÃÏà¶ÔÓÚviewport¹Ì¶¨ */
 	background-attachment: fixed;
-	/* è®©èƒŒæ™¯å›¾åŸºäºå®¹å™¨å¤§å°ä¼¸ç¼© */
+	/* ÈÃ±³¾°Í¼»ùÓÚÈİÆ÷´óĞ¡ÉìËõ */
 	background-size: cover;
-	/* è®¾ç½®èƒŒæ™¯é¢œè‰²ï¼ŒèƒŒæ™¯å›¾åŠ è½½è¿‡ç¨‹ä¸­ä¼šæ˜¾ç¤ºèƒŒæ™¯è‰² */
+	/* ÉèÖÃ±³¾°ÑÕÉ«£¬±³¾°Í¼¼ÓÔØ¹ı³ÌÖĞ»áÏÔÊ¾±³¾°É« */
 	background-color: #464646;
 }
 
@@ -344,7 +344,7 @@
 	position: fixed;
 	right: 60px;
 	top: 20px;
-	list-style: none;//å»é™¤åˆ—è¡¨ä¸­çš„å°åœ†ç‚¹
+	list-style: none;//È¥³ıÁĞ±íÖĞµÄĞ¡Ô²µã
 }
 .yir li{
 	display: inline-block;
@@ -363,7 +363,7 @@ background: #d9edf7;
 	text-align: left;
 	background: #ffffff;
 	font-size: 15px;
-	font-family: æ¥·ä½“ï¼›
+	font-family: ¿¬Ìå£»
 }
 .firstau{
 	background:url("../img/teammates.jpg") no-repeat fixed center;
@@ -410,9 +410,6 @@ background: #d9edf7;
   			height: 412px;
   			max-width: 100%;
 		}
-		
-		
-		
 		
 		
 		

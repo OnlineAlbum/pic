@@ -1,9 +1,12 @@
-<%@page language="java" contentType="text/html; charset=UTF-8"%>
+<%@page language="java" import="java.util.*,com.form.*,com.tool.*" contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
 <title>Insert title here</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style>
 a{text-decoration:none;}
 a:link, a:visited{color:#F0F0F0}
@@ -29,28 +32,6 @@ a:hover,a:active{color:#F9D909}
 
 .search input{vertical-align:middle;}
 
-@font-face
-        {
-        	font-family:"iconfont";
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot");
-        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot?#iefix") format("embedded-opentype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.woff") format("woff"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.ttf") format("truetype"),
-        	url("Icon/font_951450_l45nyv3gvbg/iconfont.svg") format("svg");
-        	font-weight:normal;
-        	font-style:normal;
-
-        }
-
-
-        .iconfont{
-        	font-family:"iconfont";
-        	font-style:normal;
-        	font-weight:normal;
-        	-webkit-font-smoothing:antialiased;
-        	-moz-osx-font-smoothing:grayscale;
-        }
-
 </style>
 </head>
 <body style="background:url(img/water.jpg);background-position:center center;background-size:cover;font-size:30px;text-align=center;">
@@ -65,16 +46,16 @@ a:hover,a:active{color:#F9D909}
   <td width=100% colspan=10>
   <table width=100% border=0 align=center>
   <tr align=center>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:14px;"><a href="personal home page.jsp"><i class="iconfont">&#xe62e;</i>个人主页</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe62c;</i>查看</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp"><i class="iconfont">&#xe613;</i>上传</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe66c;</i>删除</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:16px;"><a href="personal home page.jsp">个人主页</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">查看</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp">上传</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">删除</a></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp"><i class="iconfont">&#xe612;</i>退出</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe66b;</i>主题</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp">退出</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">主题</a></td>
   </tr>
   </table>
   </td>
@@ -98,53 +79,157 @@ a:hover,a:active{color:#F9D909}
   <tr align=center>
   
   <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin:10px,15px,10px,10px;border:0;" src="img/newphotos.jpg"></a><br/>
+  <!-- 链接触发模态框 -->
+  <a class="a-primary" data-toggle="modal" data-target="#myModal"><img style="width=300px;height:200px;margin:10px,15px,10px,10px;border:0;" src="img/newphotos.jpg"></a><br/>
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h4 class="modal-title" id="myModalLabel">新建相册</h4>
+			</div>
+			<div class="modal-body">
+				<table width=90% border="0" style="font-size:20px;font-family:隶书;"align="center">
+     			<tr>
+     				<td style="width: 617px; height: 260px; ">
+     				<table width=100% align="center">
+     					<tr align="center">
+     					<td align="center" style="width: 317px; height: 287px; ">
+     					<form action="photoServlet?info=createalbum" method="post" name="form" onSubmit="return checkAlbum(form)">
+     						<table width=90% align="left">
+     							<tr>&nbsp;</tr>
+     							<tr width=100%>
+     								<td width=50% align="right">相册名字:&nbsp;</td>
+     								<td width=50% align="left"><input type="text" id="albumname" name="albumname" size="20" placeholder="请输入相册名字"></td>
+     							</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr width=50%>
+     								
+     								<td width=50% align="right">相册类型:&nbsp;</td>
+     								<td width=50% align="left">
+     								<select id="albumtype" name="albumtype" size="1">
+     									<option selected>童年印记</option>
+     									<option value="青年踏歌">青年踏歌</option>
+     									<option value="中年大智">中年大智</option>
+     									<option value="耄耋福享">耄耋福享</option>
+     									<option value="我的家人">我的家人</option>
+     									<option value="我的朋友">我的朋友</option>
+     									<option value="特别重要">特别重要</option>
+     									<option value="生活用品">生活用品</option>
+									    <option value="甜蜜爱情">甜蜜爱情</option>
+									    <option value="亲亲宝贝">亲亲宝贝</option>
+									    <option value="动漫卡通">动漫卡通</option>
+									    <option value="游戏图案">游戏图案</option>
+									    <option value="搞笑贴图">搞笑贴图</option>
+									    <option value="宠物精灵">宠物精灵</option>
+									    <option value="美味佳肴">美味佳肴</option>	
+									    <option value="花草园林">花草园林</option>
+									    <option value="天下奇观">天下奇观</option>
+									    <option value="五花八门">五花八门</option>
+									    <option value="壮丽山河">壮丽山河</option>
+									    <option value="城市风光">城市风光</option>
+									    <option value="名胜古迹">名胜古迹</option>
+									    <option value="室内景观">室内景观</option>
+									    <option value="四季印象">四季印象</option>
+									    <option value="清风车影">清风车影</option>
+     								</select>
+     								</td>
+     							</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr width=100%>
+     								<td width=50% align ="right"><b>创建时间：</b></td>
+           							<td><%=Encrypt.currentlyTime()%><input id="albumtime" name="albumtime" type="hidden" value="<%=Encrypt.currentlyTime() %>"></td>
+     							</tr>   
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+            					<tr width=100%>
+							       <td width=50% align="right">创建用户：</td>
+							       <td><!--${sessionScope.userInfo.username}-->zc<input id="username" name="username" type="hidden" value=zc class="input2"></td>
+							    </tr>
+            					<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+            					<tr width=100%>
+            						<td width=50% align="right">验证码:&nbsp;</td>
+            						<td width=50% align="left"><input type="text" id="code" name="code" size="10">&nbsp;<input type="button" value="看不清" onClick="reload()"></td>
+            					</tr>
+            					<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr>
+						           <td height="20">&nbsp;</td>
+						           <td style="padding-left:35px;"><a href="javascript:void(0)" id="link"><img id="checkCode"
+										alt="验证码" src="image.jsp"></a></td>
+						        </tr>
+            					<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+            					<tr width=100%>
+            						<td width=50%></td>
+            						<td width=50% align="left"><input type="submit" name="Submit" value="创建">&nbsp;&nbsp;&nbsp;<input type="reset" name="Submit2" value="重置"></td>
+            					</tr>    
+            					</form> 
+            					 <tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>
+     							<tr height="2px">&nbsp;&nbsp;</tr>           			      					
+					           					
+        					</table>
+        
+     					</td>
+  					</tr>
+  				</table>
+  			</td>
+  		</tr>
+  	</table>
+			</div>
+			<div class="modal-footer">
+				<div align="center"><b>注意:不支持重复创建相同的相册</b>
+				<br><br>
+				<font color="FF0000"><b>${requestScope.information}</b></font>
+				</div>
+			</div>
+			</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
   <a href="http://www.baidu.com">新建相册</a>
   </td>
-  
+  <%
+  	List<album> list1=(List<album>)request.getSession().getAttribute("list");
+  	out.println(list1.size());
+  	int b = 1 ;
+  	for(album album1:list1){
+   %>
   <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/childhood.png"></a><br/>
-  <a href="http://www.baidu.com">童年印记</a>
+  <a href="http://www.baidu.com">
+  <img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;border-radius:25px;" src="<%=album1.getAlbumcover()%>"></a><br/>
+  <a href="http://www.baidu.com"><%=album1.getAlbumname() %></a>
   </td>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/teenager.png"></a><br/>
-  <a href="http://www.baidu.com">青年踏歌</a>
-  </td>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/man.png"></a><br/>
-  <a href="http://www.baidu.com">中年大智</a>
-  </td>
-  
-  </tr>
-  
-<tr><td width=430px height=50px></td></tr>
-  
-  <tr align=center>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin:10px,15px,10px,10px;border:0;" src="img/oldtime.png"></a><br/>
-  <a href="http://www.baidu.com">耄耋福享</a>
-  </td>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/family.png"></a><br/>
-  <a href="http://www.baidu.com">我的家人</a>
-  </td>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/friends.png"></a><br/>
-  <a href="http://www.baidu.com">我的朋友</a>
-  </td>
-  
-  <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com"><img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;" src="img/important.png"></a><br/>
-  <a href="http://www.baidu.com">特别重要</a>
-  </td>
-  
-  </tr>
- 
+  <%
+  	b++;
+  	if(b%4==0){
+   %>
+   </tr>
+   <tr><td width=430px height=50px></td></tr>
+   	 <tr align=center>
+  <%
+  	}
+  	}
+   %>
   </table>  
   </td></tr>
   
@@ -181,4 +266,15 @@ a:hover,a:active{color:#F9D909}
 </center>
 
 </body>
+<script type="text/javascript" src="js/zuijs.js"></script>
+<script>
+$(function() {
+    $('#myModal').on('hide.bs.modal',
+    function() {
+        $(this).removeData('bs.modal');
+        document.getElementById("albumtype")[0].selected="童年印记";
+        reload();
+    })
+});
+</script>
 </html>
