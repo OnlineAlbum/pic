@@ -56,7 +56,7 @@
 			width:260px;
 			height:100%;
 			background-color:#1a2855;
-			margin-top:-55px;
+			margin-top:-4.7%;
 			background-image:url("img/starsky.png");
 			background-size:cover;
 			background-repeat: no-repeat;			
