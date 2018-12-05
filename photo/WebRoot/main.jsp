@@ -29,6 +29,28 @@ a:hover,a:active{color:#F9D909}
 
 .search input{vertical-align:middle;}
 
+@font-face
+        {
+        	font-family:"iconfont";
+        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot");
+        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot?#iefix") format("embedded-opentype"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.woff") format("woff"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.ttf") format("truetype"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.svg") format("svg");
+        	font-weight:normal;
+        	font-style:normal;
+
+        }
+
+
+        .iconfont{
+        	font-family:"iconfont";
+        	font-style:normal;
+        	font-weight:normal;
+        	-webkit-font-smoothing:antialiased;
+        	-moz-osx-font-smoothing:grayscale;
+        }
+
 </style>
 </head>
 <body style="background:url(img/water.jpg);background-position:center center;background-size:cover;font-size:30px;text-align=center;">
@@ -43,16 +65,16 @@ a:hover,a:active{color:#F9D909}
   <td width=100% colspan=10>
   <table width=100% border=0 align=center>
   <tr align=center>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:16px;"><a href="personal home page.jsp">个人主页</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">查看</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp">上传</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">删除</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:14px;"><a href="personal home page.jsp"><i class="iconfont">&#xe62e;</i>个人主页</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe62c;</i>查看</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp"><i class="iconfont">&#xe613;</i>上传</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe66c;</i>删除</a></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp">退出</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">主题</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp"><i class="iconfont">&#xe612;</i>退出</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp"><i class="iconfont">&#xe66b;</i>主题</a></td>
   </tr>
   </table>
   </td>

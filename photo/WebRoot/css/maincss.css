@@ -39,7 +39,7 @@
 }
 
 .one {
-	background: #FFFFFF url(../img/20 (3).jpg) left;
+	background: #FFFFFF url(../img/1.jpg) left;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -50,7 +50,7 @@
 }
 
 .two {
-	background: #FFFFFF url(../img/20 (4).jpg) center;
+	background: #FFFFFF url(../img/2.jpg) center;
 	float: left;
 	height: 350px;
 	width: 30%;
@@ -410,6 +410,9 @@ background: #d9edf7;
   			height: 412px;
   			max-width: 100%;
 		}
+		
+		
+		
 		
 		
 		

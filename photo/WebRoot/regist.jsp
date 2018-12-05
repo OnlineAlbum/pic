@@ -17,7 +17,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
+<style>
 
+  .bb{
+            color: red;
+            vertical-align:middle;
+            text-align:middle;
+            background-color:#155B29FF;
+            border-radius:10px;
+        }
+  
+
+</style>
 
 
 </head>
@@ -54,8 +65,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                				我同意  <a href="privacy.htm" class="r-service-protocol" target="_blank" id="menu1" >《服务协议》、</a><a href="privacy.htm" class="r-service-protocol" target="_blank" onmouseover="display()" onmouseout="disappear()">《隐私保护声明》</a></p>
                				
 	
-				<input type="submit" id="zhuce"  value="注册" style="width: 88px;"  disabled/>
-				<input type = "button" value = "返回" onclick = "window.location.href = 'zuizhong.jsp'" style="width:88px;"/>
+				<input type="submit" id="zhuce"  class="bb" value="注册" style="width: 88px;"  disabled/>
+				<input type = "button" class="bb" value = "返回" onclick = "window.location.href = 'zuizhong.jsp'" style="width:88px;"/>
 			</form>
 			 <font color="red" size="3">${msg }</font> 
 		</div>

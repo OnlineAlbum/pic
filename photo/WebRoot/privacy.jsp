@@ -15,11 +15,39 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+    
+    
+		@font-face
+        {
+        	font-family:"iconfont";
+        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot");
+        	src:url("Icon/font_951450_l45nyv3gvbg/iconfont.eot?#iefix") format("embedded-opentype"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.woff") format("woff"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.ttf") format("truetype"),
+        	url("Icon/font_951450_l45nyv3gvbg/iconfont.svg") format("svg");
+        	font-weight:normal;
+        	font-style:normal;
+
+        }
+
+
+        .iconfont{
+        	font-family:"iconfont";
+        	font-style:normal;
+        	font-weight:normal;
+        	-webkit-font-smoothing:antialiased;
+        	-moz-osx-font-smoothing:grayscale;
+        }
+    
+    </style>
+    
 </head>
 <body class="first">	
 			<ul class="yir">
 				<li>
-					<a href="zuizhong.jsp">返回首页</a>
+					<a href="zuizhong.jsp"><i class="iconfont">&#xe619;</i>返回首页</a>
 				</li>&nbsp;
 				<li>
 				</li>
