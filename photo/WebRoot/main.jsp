@@ -17,6 +17,8 @@ a:hover,a:active{color:#F9D909}
 }
 #search{
 	width:400px;
+	height:30px;
+	font-size:70%;
   	background-color:#FBFFFD;
   	opacity:0.6;
 }
@@ -25,7 +27,7 @@ a:hover,a:active{color:#F9D909}
  9         
 10         color:#aab2bd;
 11      
-12         font-size:12px;
+12         font-size:8px;
 13        
 14         text-align:left;
 15     }
@@ -46,16 +48,15 @@ a:hover,a:active{color:#F9D909}
   <td width=100% colspan=10>
   <table width=100% border=0 align=center>
   <tr align=center>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:16px;"><a href="personal home page.jsp">个人主页</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">查看</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="shangchuan.jsp">上传</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">删除</a></td>
+  <td width=20% height=20px style="font-family:华文隶书;text-align=center;font-size:30px;"><font style="color:#FFF000;"><b>欢迎你！${sessionScope.userInfo.username} 用户</b></font> </td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"> </td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:30px;"></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;">  </td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
   <td width=16% height=20px></td>
-  <td width=16% height=20px></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="zuizhong.jsp">退出</a></td>
-  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"><a href="personal home page.jsp">主题</a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:30px;"><a href="zuizhong.jsp"><font style="color:#FFF000;"><b>退出</b></font></a></td>
+  <td width=6% height=20px style="font-family:华文隶书;text-align=center;font-size:18px;"> </td>
   </tr>
   </table>
   </td>
@@ -70,7 +71,7 @@ a:hover,a:active{color:#F9D909}
   <td width=100% height=80px style="display: inline-block;" align="center" >
   <div class="search">
   <form>
-  <input type="text" id="search" name="search" size="100" placeholder="请输入关键字搜索你想要的图片" autofocus="autofocus" x-webkit-speech/>&nbsp;<input type="image" src="img/sousuo2.png"/>
+  <input type="text" id="search" name="search" size="20" placeholder="请输入关键字搜索你想要的相册" autofocus="autofocus" x-webkit-speech/>&nbsp;<input type="image" src="img/sousuo2.png" style="width:25px;height:28px;"/>
   </form>
   </div>
   </td></tr>
@@ -79,8 +80,9 @@ a:hover,a:active{color:#F9D909}
   <tr align=center>
   
   <td width=430px height=220px style="font-family:隶书;font-size:20px;">
+  <div class="newalbum" style="width: 245px; height: 280px; ">
   <!-- 链接触发模态框 -->
-  <a class="a-primary" data-toggle="modal" data-target="#myModal"><img style="width=300px;height:200px;margin:10px,15px,10px,10px;border:0;" src="img/newphotos.jpg"></a><br/>
+  <a class="a-primary" data-toggle="modal" data-target="#myModal"><img style="width:216px;height:200px;margin:10px,15px,10px,10px;border:0;" src="img/newphotos.jpg"></a><br/>
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   	<div class="modal-dialog">
@@ -153,7 +155,7 @@ a:hover,a:active{color:#F9D909}
      							<tr height="2px">&nbsp;&nbsp;</tr>
             					<tr width=100%>
 							       <td width=50% align="right">创建用户：</td>
-							       <td><!--${sessionScope.userInfo.username}-->zc<input id="username" name="username" type="hidden" value=zc class="input2"></td>
+							       <td>${sessionScope.userInfo.username}<input id="username" name="username" type="hidden" value=${sessionScope.userInfo.username} class="input2"></td>
 							    </tr>
             					<tr height="2px">&nbsp;&nbsp;</tr>
      							<tr height="2px">&nbsp;&nbsp;</tr>
@@ -207,17 +209,25 @@ a:hover,a:active{color:#F9D909}
 	</div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
   <a href="http://www.baidu.com">新建相册</a>
+  </div>
   </td>
   <%
   	List<album> list1=(List<album>)request.getSession().getAttribute("list");
-  	out.println(list1.size());
+  	
   	int b = 1 ;
   	for(album album1:list1){
    %>
   <td width=430px height=220px style="font-family:隶书;font-size:20px;">
-  <a href="http://www.baidu.com">
-  <img style="width=300px;height:200px;margin=10px,15px,10px,10px;border:0;border-radius:25px;" src="<%=album1.getAlbumcover()%>"></a><br/>
-  <a href="http://www.baidu.com"><%=album1.getAlbumname() %></a>
+  <div class="smallphoto">
+    <div class="small" style="width: 245px; height: 280px; ">
+      <img style="width:216px;height:200px;margin:10px,15px,10px,10px; border:0;border-radius:25px;" src="<%=album1.getAlbumcover()%>">
+      <div class="caption" style="display: none">
+        <h3 style="margin-top:0px;margin-bottom:5px;"><a href="http://www.baidu.com"><%=album1.getAlbumname() %></a></h3>
+        <p><a href="show.jsp" class="btn btn-primary" role="button">进入该相册</a> <a href="photoServlet?info=userDeleteAlbum&id=<%=album1.getId() %>" class="btn btn-danger" role="button">删除该相册</a></p>
+      </div>
+    </div>
+  </div>
+  
   </td>
   <%
   	b++;
@@ -275,6 +285,14 @@ $(function() {
         document.getElementById("albumtype")[0].selected="童年印记";
         reload();
     })
+    $('.small').hover(function(){
+    	$(this).find('.caption').show(100);
+    	
+    },function(){
+    	$(this).find(".caption").hide(100);
+    	
+    });
 });
+
 </script>
 </html>

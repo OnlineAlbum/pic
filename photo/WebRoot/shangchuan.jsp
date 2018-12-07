@@ -75,8 +75,17 @@
      							<tr>&nbsp;&nbsp;</tr>
             					<tr width=100%>
 							       <td width=50% align="right">上传用户：</td>
-							       <td><!--${sessionScope.userInfo.username}-->zc<input name="username" type="hidden" value=zc class="input2"></td>
+							       <td>${sessionScope.userInfo.username}<input name="username" type="hidden" value= ${sessionScope.userInfo.username} class="input2"></td>
+							       
 							    </tr>
+            					<tr>&nbsp;&nbsp;</tr>
+     							<tr>&nbsp;&nbsp;</tr>
+     							<tr>&nbsp;&nbsp;</tr>
+     							<tr>&nbsp;&nbsp;</tr>
+     							<tr width=100%>
+            						<td width=50% align="right">相片说明:</td>
+            						<td width=50% align="left"><textarea name="photoNote" rows="4" cols="30" style="resize:none" ></textarea></td>
+            					</tr>
             					<tr>&nbsp;&nbsp;</tr>
      							<tr>&nbsp;&nbsp;</tr>
      							<tr>&nbsp;&nbsp;</tr>
@@ -115,11 +124,7 @@
 	 											<font color="FF0000"><b>${requestScope.information}</b></font></td>
             						
             					</tr>
-            					
-					
-            					
-        					</table>
-        
+        					</table>       
      					</td>
   					</tr>
   				</table>
@@ -131,13 +136,14 @@
 <script type="text/javascript" src="js/zuijs.js"></script>
 <script type="text/javascript">
     function addMore(){
+    var i=0;
     var td = document.getElementById("more");
     var br= document.createElement("br");
     var input= document.createElement("input");
     var button= document.createElement("input");
     
     input.type = "file";
-    input.name = "file";
+    input.name = "file"+i;
     
     button.type = "button";
     button.value = "移除...";

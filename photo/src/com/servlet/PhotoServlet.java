@@ -1,7 +1,7 @@
 package com.servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -34,11 +34,11 @@ public class PhotoServlet extends HttpServlet {
 			su.setMaxFileSize(5 * 1024 * 1024); // 设置上传文件的大小
 			su.upload();
 			Files files = su.getFiles(); // 获取上传的文件操作
-
+			System.out.println("上传照片数量："+files.getCount());
 			for (int i = 0; i < files.getCount(); i++) {
 				File singleFile = files.getFile(i); // 获取上传文件的单个文件
-				System.out.println(files.getCount());
 				String fileType = singleFile.getFileExt(); // 获取上传文件的扩展名
+				System.out.println("照片后缀为："+fileType);
 				String[] type = { "JPG", "jpg", "gif", "bmp", "BMP" }; // 设置上传文件的扩展名
 				int place = java.util.Arrays.binarySearch(type, fileType); // 判断上传文件的类型是否正确
 				String code = su.getRequest().getParameter("code"); // 获取表单中验证码内容
@@ -47,7 +47,8 @@ public class PhotoServlet extends HttpServlet {
 				System.out.println("用户输入验证码："+code);
 				System.out.println("session中的验证码："+codeSession);
 				if(code.equals(codeSession)){   // 判断验证码是否正确
-					if (place != -1) {
+					System.out.println("数组是否包含："+Arrays.asList(type).contains(fileType));
+					if (Arrays.asList(type).contains(fileType)) {
 						if (!singleFile.isMissing()) { // 判断该文件是否被选择
 							String photoName = su.getRequest().getParameter(
 									"photoName")
@@ -61,6 +62,9 @@ public class PhotoServlet extends HttpServlet {
 							String username = su.getRequest().getParameter(
 									"username"); // 获取上传用户名
 							System.out.println("上传用户名:"+username);
+							String photonote = su.getRequest().getParameter(
+									"photoNote"); // 获取上传用户名
+							System.out.println("照片说明:"+photonote);
 							String photoSize = String.valueOf(singleFile
 									.getSize()); // 获取上传文件的大小
 							System.out.println("上传文件的大小:"+photoSize);
@@ -80,6 +84,7 @@ public class PhotoServlet extends HttpServlet {
 							photo.setUsername(username);
 							photo.setPhotoAddress(filedir);
 							photo.setSmallPhoto(smalldir);
+							photo.setPhotonote(photonote);
 							System.out.println("photo_save之前");
 							
 							
@@ -145,9 +150,22 @@ public class PhotoServlet extends HttpServlet {
 		UserInfo userInfo = (UserInfo)request.getSession().getAttribute("userInfo");
 		String username = userInfo.getUsername();
 		System.out.println("当前用户："+username);
-		List list = new OperationData().queryPhotoList(username);
+		String condition = "username='"+username+"'";
+		List list = new OperationData().queryPhotoList(condition);
 		request.getSession().setAttribute("list", list);
 		request.getRequestDispatcher("main.jsp").forward(request,response);
+	}
+	public void user_deleteAlbum(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
+		data = new OperationData();
+		Integer id = Integer.valueOf(request.getParameter("id"));
+		String condition = "id="+id;
+		List list = data.queryPhotoList(condition);
+		try{
+			data.Album_delete(id);
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		request.getRequestDispatcher("dealwith.jsp").forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -163,6 +181,9 @@ public class PhotoServlet extends HttpServlet {
 		}
 		if(info.equals("refresh")){
 			this.refresh(request, response);
+		}
+		if(info.equals("userDeleteAlbum")){
+			this.user_deleteAlbum(request, response);
 		}
 	}
 

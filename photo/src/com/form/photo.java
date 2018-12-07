@@ -10,6 +10,17 @@ public class photo {
 	private String albumname = ""; // 设置相片所在相册名称的对象
 	private String printAddress="";
 	private String smallPhoto="";
+	private String photonote="";
+	
+
+	public String getPhotonote() {
+		return photonote;
+	}
+
+	public void setPhotonote(String photonote) {
+		this.photonote = photonote;
+	}
+
 	private Integer number=null;
 	private Integer max = null;
 	

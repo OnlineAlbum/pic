@@ -72,11 +72,11 @@ public class OperationData {
 				con = DriverManager.getConnection(url, userName, password);
 				System.out.println("数据库con加载成功");
 				Statement stmt = con.createStatement();
-				sql = "insert into tb_photo(photoName,photoSize,albumname,photoTime,photoAddress,username,printAddress,smallPhoto,a) values ('"+ photo.getPhotoName() + "','"
+				sql = "insert into tb_photo(photoName,photoSize,albumname,photoTime,photoAddress,username,printAddress,smallPhoto,photonote) values ('"+ photo.getPhotoName() + "','"
 						+ photo.getPhotoSize() + "','" + photo.getAlbumname() + "','"
 						+ photo.getPhotoTime() + "','" + photo.getPhotoAddress()
 						+ "','" + photo.getUsername() + "','abc','" + photo.getSmallPhoto()
-						+ "','abc')";
+						+ "','"+photo.getPhotonote()+"')";
 				 count = stmt.executeUpdate(sql);
 				 if (con != null) {    // 关闭数据库连接操作
 						try {
@@ -124,7 +124,7 @@ public class OperationData {
 				 return false;
 			 }
 		}
-		public List queryPhotoList(String username)
+		public List queryPhotoList(String condition)
 		{
 			try {
 				Class.forName(dbDriver).newInstance(); // 通过Java反射机制进行加载数据库驱动操作
@@ -136,15 +136,17 @@ public class OperationData {
 				list = new ArrayList();
 				Statement stmt = con.createStatement();
 				//sql = "select * from tb_photo where id in(select max(id) as max from tb_photo group by photoType having username='"+username+"')";
-				sql="select * from tb_album where username='"+username+"' order by id desc";
+				//sql="select * from tb_album where username='"+username+"' order by id desc";
+				sql="select * from tb_album where "+condition+" order by id desc";
 				album album = null;
 				ResultSet rs = stmt.executeQuery(sql);
 				while(rs.next()){
 					album = new album();
 					album.setAlbumtype(rs.getString("albumtype"));
 					album.setAlbumname(rs.getString("albumname"));
-					//photo.setNumber(rs.getInt("number"));
-					//photo.setMax(rs.getInt("max"));
+					album.setAlbumtime(rs.getString("albumtime"));
+					album.setId(rs.getInt("id"));
+					album.setUsername(rs.getString("username"));
 					album.setAlbumcover(rs.getString("albumcover"));
 				
 					list.add(album);
@@ -207,6 +209,34 @@ public class OperationData {
 				}
 			
 			return list;
+		}
+		public boolean Album_delete(Integer id) throws SQLException{
+			int count=0;
+			sql = "delete from tb_album where id="+id+"";
+			try {
+				Class.forName(dbDriver).newInstance(); // 通过Java反射机制进行加载数据库驱动操作
+			} catch (Exception ex) {
+				System.out.println(ex);
+			}
+			con = DriverManager.getConnection(url, userName, password);
+			System.out.println("数据库con加载成功");
+			Statement stmt = con.createStatement();
+			count = stmt.executeUpdate(sql);
+			 if (con != null) {    // 关闭数据库连接操作
+					try {
+						con.close();
+					} catch (SQLException e) {
+						System.out.println("Failed to close connection!");
+					}finally{
+						con=null;
+					}
+				}
+			 if(count>0){
+				 return true;
+			 }else{
+				 return false;
+			 }
+			
 		}
 		public String findUsername(String username) {
 			String psw = null;

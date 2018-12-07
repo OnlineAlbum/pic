@@ -51,7 +51,8 @@ public class UserInfoServlet extends HttpServlet {
 				if(userInfo.getPassword().equals(password))
 				{
 					request.getSession().setAttribute("userInfo",userInfo);
-					List list = new OperationData().queryPhotoList(username);
+					String condition = "username='"+username+"'";
+					List list = new OperationData().queryPhotoList(condition);
 					request.getSession().setAttribute("list", list);
 					response.getWriter().println("yes");
 

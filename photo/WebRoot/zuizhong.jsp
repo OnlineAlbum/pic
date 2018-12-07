@@ -144,20 +144,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 		</div>
 
-
- 
-   
-
-
-
-
-
-
-
-
-
-
-
 		<div class="jie">
 			<h1>有些时光总想留着慢慢品味</h1>
 		</div>
